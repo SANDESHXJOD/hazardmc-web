@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HazardMC - Lifesteal Network</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    /* Basic body */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      background: #000;
+    }
+
+    /* Toxic green animated particles background */
+    .particle {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: rgba(0,255,0,0.3);
+      border-radius: 50%;
+      animation: float 15s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0;}
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) translateX(100px) rotate(360deg); opacity: 0;}
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 60px 10px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #00ff55;
+      text-shadow: 0 0 15px #00ff55, 0 0 30px #00aa00;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccffcc;
+    }
+
+    .ip-box {
+      background: rgba(0, 50, 0, 0.8);
+      border: 2px solid #00ff55;
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 0 20px #00ff55;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 25px;
+      background: #00ff55;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ff55;
+    }
+
+    .btn:hover {
+      background: #00cc44;
+      box-shadow: 0 0 20px #00ff55;
+    }
+
+    h2 {
+      color: #00ff99;
+      text-shadow: 0 0 10px #00ff55;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      border-top: 1px solid #003300;
+      font-size: 0.9em;
+      color: #88ff88;
+    }
+
+    a { color: #00ff55; }
+  </style>
+</head>
+<body>
+  <!-- Particle background -->
+  <script>
+    const numParticles = 50;
+    for(let i=0;i<numParticles;i++){
+      let p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * window.innerWidth + 'px';
+      p.style.width = p.style.height = (10 + Math.random()*20) + 'px';
+      p.style.animationDuration = (10 + Math.random()*20) + 's';
+      document.body.appendChild(p);
+    }
+  </script>
+
+  <header>
+    <h1>☣️ HazardMC ☣️</h1>
+    <p>An Epic Lifesteal Network — Start your adventure now!</p>
+    <div class="ip-box">IP: play.hazardmc.fun</div><br />
+    <a href="https://discord.gg/33UY8v3gZj" class="btn">Join Discord</a>
+    <a href="#" class="btn">Join Server Now</a>
+  </header>
+
+  <section>
+    <h2>💀 Why Play on HazardMC?</h2>
+    <p>
+      ☣️ Toxic Lifesteal PvP System <br />
+      ⚔️ Hardcore battles with custom events <br />
+      🎁 Daily rewards & surprise giveaways <br />
+      💬 Join our Discord for events and updates <br />
+    </p>
+  </section>
+
+  <footer>
+    © 2025 HazardMC Network | Join our Discord for more info: 
+    <a href="https://discord.gg/33UY8v3gZj">Discord.gg/HazardMC</a>
+  </footer>
+</body>
+</html>
